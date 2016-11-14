@@ -1,11 +1,9 @@
 ---
 - name: Install ntfy via PyPi.
-  become: yes
   pip:
     name: notify
 
 - name: Create ntfy config directory.
-  become: no
   file:
     path: "{{ ansible_env.HOME }}/.config/ntfy"
     mode: "700"
