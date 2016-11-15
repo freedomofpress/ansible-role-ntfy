@@ -1,16 +1,18 @@
 ---
 - name: Install ntfy via PyPi.
+  become: yes
   pip:
     name: notify
+    state: present
 
 - name: Create ntfy config directory.
   file:
-    path: "{{ ansible_env.HOME }}/.config/ntfy"
+    path: ".config/ntfy"
     mode: "700"
     state: directory
 
 - name: Write ntfy config.
   copy:
     mode: "600"
-    dest: "{{ ansible_env.HOME }}/.config/ntfy/ntfy.yml"
+    dest: ".config/ntfy/ntfy.yml"
     content: "{{ ntfy_config|to_nice_yaml }}"
