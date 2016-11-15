@@ -16,3 +16,4 @@
     mode: "600"
     dest: ".config/ntfy/ntfy.yml"
     content: "{{ ntfy_config|to_nice_yaml }}"
+  when: ntfy_config != {}
