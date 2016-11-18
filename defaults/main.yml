@@ -1,3 +1,4 @@
 ---
-# defaults file for ntfy
+# See the ntfy docs for how the config file should be structured:
+# https://github.com/dschep/ntfy
 ntfy_config: {}
