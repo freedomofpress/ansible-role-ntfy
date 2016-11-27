@@ -2,7 +2,7 @@
 - name: Install ntfy via PyPi.
   become: yes
   pip:
-    name: notify
+    name: ntfy
     state: present
 
 - name: Create ntfy config directory.
