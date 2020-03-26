@@ -2,8 +2,7 @@
 - name: Install ntfy apt dependencies.
   become: yes
   apt:
-    name: "{{ item }}"
-  with_items: "{{ ntfy_apt_packages }}"
+    name: "{{ ntfy_apt_packages }}"
 
 - name: Install ntfy via PyPi.
   become: yes
